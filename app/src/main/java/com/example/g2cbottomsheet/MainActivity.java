@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
         list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
         list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
+        list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
+        list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
+        list2.add(new ModelVertical(R.drawable.air_filter,"Air Filters","Adding a filter means that you'll be in control of what it","\u20B9 300"));
         verticalAdapter = new VerticalAdapter(this,list2);
         verti_recyclerView.setAdapter(verticalAdapter);
 

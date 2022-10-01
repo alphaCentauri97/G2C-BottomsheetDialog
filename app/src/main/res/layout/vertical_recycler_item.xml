@@ -74,7 +74,6 @@
                 android:textColor="@color/blue"
                 android:background="@drawable/add_button"/>
 
-
         </LinearLayout>
 
 
