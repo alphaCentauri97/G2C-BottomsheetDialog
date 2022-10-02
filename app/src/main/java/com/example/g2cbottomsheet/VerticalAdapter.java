@@ -1,5 +1,6 @@
 package com.example.g2cbottomsheet;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,11 +33,24 @@ public class VerticalAdapter extends RecyclerView.Adapter<VerticalAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.productName.setText(list.get(position).getProduct());
         holder.productText.setText(list.get(position).getProductText());
         holder.price.setText(list.get(position).getPrice());
         holder.img.setImageResource(list.get(position).getPic());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,list.get(position).getProduct() , Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.addbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,list.get(position).getPrice()+ " added", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

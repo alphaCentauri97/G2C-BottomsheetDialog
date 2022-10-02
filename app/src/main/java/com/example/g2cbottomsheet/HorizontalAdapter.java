@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -50,6 +51,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Vi
             public void onClick(View view) {
                 row_index = position;
                 notifyDataSetChanged();
+                Toast.makeText(context, list.get(position).getOilCompany(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -65,6 +67,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Vi
             holder.oil_company.setTextColor(Color.parseColor("#A8A7A7"));
             holder.oil_price.setTextColor(Color.parseColor("#A8A7A7"));
         }
+
     }
 
     @Override
